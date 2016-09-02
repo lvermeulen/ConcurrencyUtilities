@@ -1,30 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrencyUtilities", "Src\ConcurrencyUtilities\ConcurrencyUtilities.csproj", "{F6FA56C6-4185-4AB7-A4B7-D51C2C3A78A1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrencyUtilities.Tests", "Tests\ConcurrencyUtilities.Tests\ConcurrencyUtilities.Tests.csproj", "{CC80F126-500D-4474-A415-59F0B1FA90BF}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1D976582-7D31-48FE-AF2F-4F739C13233F}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E12F5476-CF44-4EB0-9B51-AAB4F0089B98}"
 	ProjectSection(SolutionItems) = preProject
 		build.cmd = build.cmd
 		build.fsx = build.fsx
 		CHANGELOG.md = CHANGELOG.md
+		global.json = global.json
 		README.md = README.md
 		SourceHeader.cs = SourceHeader.cs
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrencyUtilities.Benchmarks", "Tests\ConcurrencyUtilities.Benchmarks\ConcurrencyUtilities.Benchmarks.csproj", "{C3DD8CA7-34FD-4A64-8179-1D6C303BE016}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConcurrencyUtilities", "src\ConcurrencyUtilities\ConcurrencyUtilities.xproj", "{881841E9-822F-4D2F-BEAC-0A7B1F4AF8CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9028AF21-8BC8-469E-BF5F-267A80F9AC02}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConcurrencyUtilities.Tests", "test\ConcurrencyUtilities.Tests\ConcurrencyUtilities.Tests.xproj", "{804EB780-3C78-4314-B162-3309BC55E313}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConcurrencyUtilities.Benchmarks", "Test\ConcurrencyUtilities.Benchmarks\ConcurrencyUtilities.Benchmarks.xproj", "{746CAF52-2AB6-4E0E-8485-26066C01C7EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,20 +27,24 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6FA56C6-4185-4AB7-A4B7-D51C2C3A78A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6FA56C6-4185-4AB7-A4B7-D51C2C3A78A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6FA56C6-4185-4AB7-A4B7-D51C2C3A78A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6FA56C6-4185-4AB7-A4B7-D51C2C3A78A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC80F126-500D-4474-A415-59F0B1FA90BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC80F126-500D-4474-A415-59F0B1FA90BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC80F126-500D-4474-A415-59F0B1FA90BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC80F126-500D-4474-A415-59F0B1FA90BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3DD8CA7-34FD-4A64-8179-1D6C303BE016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3DD8CA7-34FD-4A64-8179-1D6C303BE016}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3DD8CA7-34FD-4A64-8179-1D6C303BE016}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3DD8CA7-34FD-4A64-8179-1D6C303BE016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881841E9-822F-4D2F-BEAC-0A7B1F4AF8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881841E9-822F-4D2F-BEAC-0A7B1F4AF8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881841E9-822F-4D2F-BEAC-0A7B1F4AF8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881841E9-822F-4D2F-BEAC-0A7B1F4AF8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804EB780-3C78-4314-B162-3309BC55E313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804EB780-3C78-4314-B162-3309BC55E313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804EB780-3C78-4314-B162-3309BC55E313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804EB780-3C78-4314-B162-3309BC55E313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746CAF52-2AB6-4E0E-8485-26066C01C7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746CAF52-2AB6-4E0E-8485-26066C01C7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746CAF52-2AB6-4E0E-8485-26066C01C7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746CAF52-2AB6-4E0E-8485-26066C01C7EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{804EB780-3C78-4314-B162-3309BC55E313} = {9028AF21-8BC8-469E-BF5F-267A80F9AC02}
+		{746CAF52-2AB6-4E0E-8485-26066C01C7EC} = {9028AF21-8BC8-469E-BF5F-267A80F9AC02}
 	EndGlobalSection
 EndGlobal

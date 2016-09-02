@@ -9,7 +9,7 @@ namespace ConcurrencyUtilities.Tests
         [Fact]
         public void VolatileDouble_HasCorrectSize()
         {
-            VolatileDouble.SizeInBytes.Should().Be(Marshal.SizeOf(typeof(VolatileDouble)));
+            VolatileDouble.SizeInBytes.Should().Be(Marshal.SizeOf<VolatileDouble>());
         }
 
         [Fact]

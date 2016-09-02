@@ -1,12 +1,38 @@
-{
-  "version": "1.0.0",
+﻿{
+  "title": "ConcurrencyUtilities",
+  "version": "0.1.5-alpha",
+  "authors": [ "iulian.margarintescu" ],
+  "copyright": "Iulian Margarintescu",
+  "description": "This library provides a set of classes useful for performing efficient concurrent operations. Includes a port of Java's LongAdder and Striped64 classes.",
+
+  "buildOptions": {
+    "define": [ "LIBLOG_PORTABLE" ],
+    "optimize": true,
+    "outputName": "ConcurrencyUtilities",
+    "xmlDoc": false
+  },
+
+  "packOptions": {
+    "owners": [ "Iulian Margarintescu" ],
+    "requireLicenseAcceptance": false,
+    "summary": "Utilities for performing efficient concurrent operations.",
+    "tags": [ "concurrency", "utilities", "LongAdder", "AtomicLong", "Striped64", "Volatile" ],
+    "projectUrl": "https://github.com/etishor/ConcurrencyUtilities/",
+    "licenseUrl": "https://github.com/etishor/ConcurrencyUtilities/blob/master/LICENSE",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/etishor/ConcurrencyUtilities/"
+    }
+  },
+
   "frameworks": {
-    "dnx45": {},
-    "dnxcore50": {
+    "net451": {},
+    "netstandard1.3": {
       "dependencies": {
-        "System.Threading": "4.0.10-beta-*",
-        "System.Threading.Thread": "4.0.0-beta-*",
-        "System.Runtime.Extensions": "4.0.0-beta-*"
+        "NETStandard.Library": "1.6.0",
+        "System.Dynamic.Runtime": "4.0.11",
+        "System.Threading.Thread": "4.0.0",
+        "Microsoft.CSharp": "4.0.1"
       }
     }
   }
